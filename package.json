@@ -1,0 +1,12 @@
+{
+	"main": "app://RSS/app/index.htm",
+	"name": "RSS",
+	"version": "0.0.1",
+	"window": {
+		"title": "RSS",
+		"width": 800,
+		"height": 500,
+		"toolbar": false,
+		"position": "center"
+	}
+}

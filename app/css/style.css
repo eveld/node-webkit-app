@@ -1,0 +1,171 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	background-color: #2D2D2D;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+}
+
+header {
+	top: 0;
+	left: 0;
+	position: fixed;
+	background-color: #37455F;
+	width: 100%;
+	height: 50px;
+}
+
+header h1 {
+	color: #FFFFFF;
+	margin: 0;
+	padding: 0;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+#logo {
+	margin: 0;
+	padding: 0;
+	display:table-cell;
+	text-align: center;
+	vertical-align: middle;
+	width: 50px;
+	height: 50px;
+	background-color: #3C4C69;
+}
+
+#title {
+	font-style: italic;
+	margin: 0;
+	padding: 0 0 0 10px;
+	display:table-cell;
+	text-align: center;
+	vertical-align: middle;
+	width: 50px;
+	height: 50px;
+}
+
+nav {
+	z-index: 2000;
+	top: 50px;
+	left: 0;
+	position: fixed;
+	height: 100%;
+	width: 50px;
+	background-color: #40516F;
+}
+
+nav a {
+	background-color: #40516F;
+	position: relative;
+	display: block;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	color: #FFFFFF;
+	height: 50px;
+	width: 50px;
+}
+
+nav a.active {
+	background-color: #DC6767;
+}
+
+nav a i {
+	margin: 15px 0 0 0;
+}
+
+nav a .tooltip {
+	position: absolute;
+	height: 35px;
+	top: 0;
+	padding: 15px 15px 0 0;
+	left: 50px;
+	z-index: 2000;
+	display: none;
+	background-color: inherit
+}
+
+nav a:hover .tooltip {
+	display: block;	
+}
+
+section {
+	position: fixed;
+	top: 50px;
+	left: 50px;
+	width: 100%;
+	height: 100%;
+	padding: 0 50px 50px 0;
+	background-color: #FCFCFC;
+	color: #999999;
+	overflow-y: scroll;
+}
+
+#about {
+	margin: 0 50px 50px 0;
+	padding: 6px 12px 9px 12px;
+}
+
+#about h2 {
+	font-weight: bold;
+	color: #40516F;
+	font-size: 14px;
+}
+
+#posts {
+	margin: 0;
+	padding: 0 50px 50px 0;
+	list-style: none;
+}
+
+#posts li {
+	border-bottom: 1px solid #F0F2F5;
+	padding: 6px 12px 9px 12px;
+}
+
+#posts .empty h2 {
+	font-weight: bold;
+	color: #40516F;
+	font-size: 14px;
+}
+
+#posts .post .details .author {
+	font-weight: bold;
+	color: #40516F;
+}
+
+#posts .post .details .date {
+	color: #8899A6;
+	font-size: 13px;
+}
+
+#posts .post .content {
+	margin: 5px 0;
+}
+
+#debug {
+	z-index: 5000;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+#debug .tools {
+	text-align: right;
+	width: 100%;
+	color: #435051;
+	background-color: #1E1E1E;
+}
+
+#debug .tools button {
+	padding: 5px 10px;
+	border: 0;
+	color: #435051;
+	background-color: #1E1E1E;
+}
+
+#debug .tools button:focus {
+    outline: none;
+}

@@ -1,0 +1,9 @@
+{
+	"name": "fortune",
+	"description": "RSS feed",
+	"version": "0.0.1",
+	"private": true,
+	"dependencies": {
+		"fortune": "0.2.4"
+	}
+}

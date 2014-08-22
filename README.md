@@ -1,0 +1,1 @@
+An example application made with node-webkit.

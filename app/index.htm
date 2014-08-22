@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+	<head>
+		<title>RSS</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="css/open-sans.css">
+	</head>
+	<body>
+		<script type="text/x-handlebars" data-template-name="application">
+		<header>
+			<h1 id="logo">fd</h1>
+			<h1 id="title">{{currentPath}}</h1>
+		</header>
+		<nav>
+			{{#link-to 'feed'}}<i class="fa fa-inbox fa-fw"></i> <span class="tooltip">Feed</span>{{/link-to}}
+			{{#link-to 'about'}}<i class="fa fa-code fa-fw"></i> <span class="tooltip">About</span>{{/link-to}}
+		</nav>
+		<section>
+			{{outlet}}
+		</section>
+		</script>
+
+		<script type="text/x-handlebars" data-template-name="feed">
+		<ul id="posts">
+		{{#each}}
+			<li class="post">
+				<div class="details">
+					<span class="author">{{author}}</span>
+					<span class="date">@ {{dateSince date}}</span>
+				</div>
+				<div class="content">{{content}}</div>
+			</li>
+		{{else}}
+			<li class="empty">
+				<h2>No posts...</h2>
+				<p>There are no posts to display.</p>
+			</li>
+		{{/each}}
+		</ul>
+		</script>
+
+		<script type="text/x-handlebars" data-template-name="about">
+			<div id="about">
+				<h2>About fd.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</script>
+
+
+		<div id="app"></div>
+		<!-- Debug bar. -->
+		<div id="debug">
+			<div class="tools">
+				<button class="refresh"><i class="fa fa-refresh fa-fw"></i></button>
+				<button class="developer"><i class="fa fa-rocket fa-fw"></i></button>
+				<button class="tests"><i class="fa fa-check fa-fw"></i></button>
+			</div>
+		</div>
+
+		<!-- Libraries. -->
+		<script src="lib/jquery-1.10.2.js"></script>
+		<script src="lib/handlebars-1.1.2.js"></script>
+		<script src="lib/moment.js"></script>
+		<script src="lib/ember-1.6.1.js"></script>
+		<script src="lib/ember-data.js"></script>
+		<script src="lib/json_api_adapter.js"></script>
+
+		<!-- App. -->
+		<script src="app.js"></script>
+		<script src="router.js"></script>
+
+		<!-- Helpers. -->
+		<script src="helpers/date.js"></script>
+
+		<!-- Adapters. -->
+		<script src="adapters/application.js"></script>
+
+		<!-- Routes. -->
+		<script src="routes/feed.js"></script>
+
+		<!-- Models. -->
+		<script src="models/post.js"></script>
+	</body>
+</html>
