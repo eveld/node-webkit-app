@@ -1,13 +1,16 @@
-An example application made with node-webkit.
+#RSS
+An example application made with node-webkit and ember.   
 
-To start the fortune server:
+#Running the server
+To start the fortune server:   
 ```
 cd fortune
 npm install
 node server
 ```
 
-To run the node-webkit application:
+#Running the app
+To run the node-webkit application:   
 ```
 <path to node-webkit> .
 ```
